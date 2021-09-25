@@ -1,0 +1,53 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+
+  &-heading {
+    right: 0;
+    font-size: 1.6rem;
+    margin-bottom: 70px;
+    width: 100%;
+    position: relative;
+
+    .close-btn {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+  }
+
+  &-item {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #151111;
+    transition: all 0.25s linear;
+
+    &:not(:last-child):hover {
+      background-color: $purple;
+    }
+    &:not(:last-child):hover a {
+      color: #fff;
+    }
+  }
+}
+
+.menu.active {
+  transform: translateX(0);
+}

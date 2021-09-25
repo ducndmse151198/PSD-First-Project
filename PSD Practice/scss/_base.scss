@@ -1,0 +1,58 @@
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  color: $text-primary;
+  font-family: $font-primary;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.second-font {
+  font-family: $font-secondary;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $font-primary;
+  color: white;
+  max-height: 55px;
+  padding: 20px 70px;
+  border-radius: 6px;
+
+  &--primary {
+    background-color: $purple;
+  }
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: lineHeight(56, 36);
+  color: $text-primary;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: lineHeight(34, 18);
+  color: $text-secondary;
+}
+
+a {
+  color: $text-primary;
+}
+
+header,
+section,
+footer {
+  display: none;
+}
+
+section[id] {
+  scroll-margin-top: 30px;
+}

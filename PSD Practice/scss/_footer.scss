@@ -1,0 +1,149 @@
+.footer {
+  background-color: #282f3a;
+  display: block;
+
+  a {
+    color: $text-secondary;
+  }
+
+  &-top {
+    padding: 150px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 140px;
+  }
+
+  &-desc {
+    font-size: 16px;
+    line-height: lineHeight(30, 16);
+    font-weight: 400;
+    color: $text-secondary;
+    margin: 40px 0;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &-socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+
+    &-item {
+      color: $text-secondary;
+      cursor: pointer;
+    }
+
+    &-item:hover {
+      color: #fff;
+    }
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+
+  &-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px 0;
+
+    &-item {
+      color: $text-secondary;
+    }
+  }
+
+  &-phones,
+  &-email {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  strong {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  &-address {
+    color: $text-secondary;
+    font-size: 16px;
+    line-height: lineHeight(30, 16);
+  }
+
+  &-container {
+    padding: 65px 0;
+  }
+
+  &-bottom {
+    background-color: #252b36;
+  }
+
+  &-rocket {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    background-color: $purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+
+    &-container {
+      position: relative;
+    }
+  }
+}
+
+@include maxWidth(1025px) {
+  .footer {
+    &-rocket {
+      right: 15px;
+    }
+
+    &-bottom {
+      padding: 0 15px;
+    }
+  }
+}
+
+@include maxWidth(769px) {
+  .footer {
+    &-top {
+      padding: 100px 0;
+      gap: 0 70px;
+    }
+  }
+}
+
+@include maxWidth(415px) {
+  .footer {
+    &-top {
+      padding: 50px 0;
+      grid-template-columns: 1fr;
+      grid-gap: 50px 0;
+    }
+
+    &-container {
+      padding: 30px 0;
+    }
+
+    &-rocket {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  }
+}

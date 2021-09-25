@@ -1,0 +1,85 @@
+.contact {
+  padding: 150px 0;
+  background: url("../img/contact-background.jpg") no-repeat center / cover;
+  display: block;
+
+  &-container {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  &-content {
+    margin-bottom: 100px;
+  }
+
+  &-heading {
+    font-weight: 400;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 45px;
+  }
+
+  &-desc {
+    text-align: center;
+    word-break: break-all;
+  }
+
+  &-field {
+    width: 100%;
+    padding: 20px 30px;
+    border: 1px solid #bbb;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      color: #bbb;
+    }
+    &::-moz-input-placeholder {
+      color: #bbb;
+    }
+
+    &:focus {
+      border: 1.5px solid #fff;
+    }
+  }
+
+  &-textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  &-btn {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 25px 75px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    background-image: linear-gradient(to right, #f4779b, #ffaa40);
+    color: #fff;
+  }
+}
+
+@include maxWidth(769px) {
+  .contact {
+    padding: 100px 0;
+    &-content {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@include maxWidth(415px) {
+  .contact {
+    padding: 50px 0;
+    &-content {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+}

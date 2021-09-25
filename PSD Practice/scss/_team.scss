@@ -1,0 +1,59 @@
+.team {
+  padding: 150px 0;
+  background-color: $gray-light;
+  display: block;
+  &-main {
+    display: flex;
+    align-items: center;
+    gap: 0 130px;
+  }
+
+  &-content {
+    max-width: 370px;
+    flex-shrink: 0;
+  }
+
+  &-images {
+    display: flex;
+    align-items: center;
+    gap: 0 35px;
+    max-width: 670px;
+  }
+
+  &-title {
+    margin-bottom: 40px;
+  }
+
+  &-desc {
+    margin-bottom: 50px;
+  }
+
+  &-img2 {
+    margin-top: 30px;
+    margin-left: auto;
+  }
+}
+
+@include maxWidth(769px) {
+  .team {
+    padding: 100px 0;
+    &-main {
+      gap: 0 60px;
+    }
+
+    &-images {
+      gap: 0 30px;
+    }
+  }
+}
+
+@include maxWidth(415px) {
+  .team {
+    padding: 50px 0;
+    &-main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 60px 0;
+    }
+  }
+}

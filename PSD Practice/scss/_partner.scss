@@ -1,0 +1,38 @@
+.partner {
+  margin-bottom: 150px;
+  display: block;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 120px;
+  }
+
+  &-item {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:nth-child(3)):hover {
+      opacity: 10%;
+    }
+  }
+}
+
+@include maxWidth(769px) {
+  .partner {
+    margin-bottom: 100px;
+    &-main {
+      gap: 60px;
+    }
+  }
+}
+
+@include maxWidth(415px) {
+  .partner {
+    &-main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+  }
+}
